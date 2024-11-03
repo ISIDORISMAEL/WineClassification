@@ -9,7 +9,23 @@ Before running the code, make sure you have the following libraries installed:
 •	matplotlib
 You can install these libraries using pip:
 bash
+
 pip install pandas numpy matplotlib
+
+**Download the wine .csv files from data archive on Linux**
+1. !rm -f winequality-red.csv winequality-white.csv
+2. !wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+3. !wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv
+
+**or**
+
+**Download the wine .csv files from data archive on Windows**
+
+**Remove existing wine quality CSV files if they exist and Download the wine quality CSV files from UCI Machine Learning Repository****
+1. Remove-Item -Path ".\winequality-red.csv" -ErrorAction SilentlyContinue
+2. Remove-Item -Path ".\winequality-white.csv" -ErrorAction SilentlyContinue
+3. Invoke-WebRequest -Uri "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv" -OutFile "winequality-red.csv"
+4. Invoke-WebRequest -Uri "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv" -OutFile "winequality-white.csv"
 
 **Project Structure**
 1.	Data Loading and Preprocessing: The code reads red and white wine datasets, assigns labels to distinguish between them, combines and shuffles the data.
